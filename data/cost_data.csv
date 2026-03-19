@@ -1,1 +1,25 @@
 date,department,category,vendor,amount
+2026-01-03,Sales,Travel,KTX,120000
+2026-01-05,Marketing,Ads,Google,450000
+2026-01-08,HR,Training,FastCampus,300000
+2026-01-10,Operations,Office Supplies,Coupang,85000
+2026-01-12,Finance,Software,Microsoft,220000
+2026-01-15,Sales,Client Meeting,Starbucks,42000
+2026-01-18,Marketing,Ads,Naver,380000
+2026-01-22,Operations,Logistics,CJ Logistics,175000
+2026-02-02,Sales,Travel,SRT,98000
+2026-02-04,Marketing,Ads,Meta,520000
+2026-02-06,HR,Recruitment,Saramin,210000
+2026-02-09,Operations,Office Supplies,11st,67000
+2026-02-11,Finance,Software,Adobe,145000
+2026-02-14,Sales,Client Meeting,Twosome,56000
+2026-02-17,Marketing,Promotion,Kakao,310000
+2026-02-20,Operations,Utilities,KEPCO,260000
+2026-03-03,Sales,Travel,Korean Air,340000
+2026-03-05,Marketing,Ads,Google,610000
+2026-03-07,HR,Training,Inflearn,180000
+2026-03-10,Operations,Maintenance,Local Vendor,230000
+2026-03-12,Finance,Consulting,Deloitte,500000
+2026-03-15,Sales,Client Meeting,Outback,87000
+2026-03-18,Marketing,Promotion,Instagram,275000
+2026-03-22,Operations,Logistics,Hanjin,190000
