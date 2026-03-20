@@ -58,6 +58,9 @@ def main():
             else:
                 monthly_data = summarize_by_department(monthly_df)
                 category_data = summarize_by_category(monthly_df)
+                top_category = category_data.index[0]
+                top_value = category_data.iloc[0]
+
                 print("=== 데이터 미리보기 ===")
                 print(df.head())
                 print()
@@ -79,6 +82,7 @@ def main():
 
                 #Graph
                 plot_category_top3(category_data, month)
+                print(f"{month}월에는 {top_category} category의 비용이 가장 높았습니다({top_value})")
 
     except ValueError:
         print("숫자를 입력하세요")
