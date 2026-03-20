@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def load_data():
     df = pd.read_csv("data/cost_data.csv")
@@ -21,9 +22,30 @@ def summarize_by_month(df):
     )
     return monthly_summary
 
+def summarize_by_category(df):
+    category_summary = (
+        df.groupby("category")["amount"]
+        .sum()
+        .sort_values(ascending=False)
+        .head(3)        
+    )
+    return category_summary
+
+def plot_category_top3(category_data, month):
+    plt.figure(figsize=(8, 5))
+    category_data.plot(kind="bar")
+    plt.title(f"Month {month} Category TOP 3 Bar Chart")
+    plt.xlabel("Category")
+    plt.ylabel("Amount")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.savefig(f"result/{month}_category_top3.png")
+    plt.show()
+
+
 def main():
     df = load_data()
-
+    
     try:
         month = int(input("몇 월을 보시겠습니까?"))
 
@@ -35,6 +57,7 @@ def main():
                 print("데이터 없음")
             else:
                 monthly_data = summarize_by_department(monthly_df)
+                category_data = summarize_by_category(monthly_df)
                 print("=== 데이터 미리보기 ===")
                 print(df.head())
                 print()
@@ -49,6 +72,13 @@ def main():
 
                 print(f"=== {month}월의 부서별 총비용 ===")
                 print(monthly_data)
+                print()
+
+                print(f"=== {month}월의 Category TOP 3 ===")
+                print(category_data)
+
+                #Graph
+                plot_category_top3(category_data, month)
 
     except ValueError:
         print("숫자를 입력하세요")
