@@ -43,7 +43,7 @@ python3 main.py
 
 ## Example Output Graph
 
-아래 그래프틑 선택한 달의 Category TOP 3 비용 내역을 보여줍니다.
+아래 그래프는 선택한 달의 Category TOP 3 비용 내역을 보여줍니다.
 
 ![Month 3 Graph](result/2_category_top3.png)
 
@@ -56,6 +56,6 @@ python3 main.py
 - matplotlib으로 집계 결과를 시각화하는 방법
 - 분석 결과를 이미지 파일로 저장하는 방법
 
-## Note
+## Notes
 
 이 프로젝트는 Python과 pandas를 사용하여 비용 분석, 함수 구조, 간단한 보고 workflow를 연습하기 위해 제작된 Entry-level의 포트폴리오 프로젝트입니다.
